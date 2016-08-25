@@ -25,6 +25,8 @@ app.get('/', function(req,res) {
   res.send('Hello! The API is at http://localhost:' + port + '/api');
 });
 
+require('./config/passport')(passport);
+
 //start the server:
 app.listen(port);
 console.log('There will be dragons: http://localhost' + port);
